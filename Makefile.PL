@@ -15,17 +15,19 @@ my $preop = 'true';
 
 WriteMakefile1(
   NAME         => 'template',
-  VERSION_FROM => 'scripts/template.pl',
+  VERSION_FROM => 'scripts/nextflow.pl',
   AUTHOR => q{Lee S. Katz <gzu2@cdc.gov>},
   EXE_FILES    => [
-    "scripts/template.pl",
+    "scripts/nextflow.pl",
   ],
   PREREQ_PM    => {
     # Core modules
-    'File::Basename' => 0,
-    'Data::Dumper'   => 0,
+    'File::Basename' => 0.1,
+    'Data::Dumper'   => 0.1,
     'version'        => 0.77,
-    'Getopt::Long'   => 0,
+    'Getopt::Long'   => 0.1,
+    'Schedule::SGELK'=> 1.0,
+    'File::Slurp'    => 0.1,
   },
   BUILD_REQUIRES => {
     'Test::More'     => 0.47,
