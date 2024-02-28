@@ -14,7 +14,7 @@ my $preop = 'true';
   #'pod2text README.pod | tee $(DISTVNAME)/README > README';
 
 WriteMakefile1(
-  NAME         => 'template',
+  NAME         => 'Nextflow-Perl',
   VERSION_FROM => 'scripts/nextflow.pl',
   AUTHOR => q{Lee S. Katz <gzu2@cdc.gov>},
   EXE_FILES    => [
@@ -26,8 +26,8 @@ WriteMakefile1(
     'Data::Dumper'   => 0.1,
     'version'        => 0.77,
     'Getopt::Long'   => 0.1,
-    'Schedule::SGELK'=> 1.0,
-    'File::Slurp'    => 0.1,
+    'File::Slurp'    => 9999.32,
+    'Schedule::SGELK'=> 1.6,
   },
   BUILD_REQUIRES => {
     'Test::More'     => 0.47,
@@ -44,8 +44,8 @@ WriteMakefile1(
     resources => {
       repository => {
         type => 'git',
-        url => 'git://github.com/lskatz/template.git',
-        web => 'https://github.com/lskatz/template',
+        url => 'git://github.com/lskatz/nextflow-perl.git',
+        web => 'https://github.com/lskatz/nextflow-perl',
       },
     },
   },
